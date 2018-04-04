@@ -8,7 +8,7 @@ while IFS='' read -r line || [[ -n "$line" ]]; do
 		END=$(date +%s.%N)
 		DIFF=$(echo "$END - $START" | bc)
 		echo "scala,naive,$line,$DIFF"
-		echo "scala,naive,$line,$DIFF" >> results.csv
+		echo "scala,naive,$line,$DIFF" >> data/results.csv
 	done
 done < "data/input"
 
@@ -21,7 +21,7 @@ while IFS='' read -r line || [[ -n "$line" ]]; do
 		END=$(date +%s.%N)
 		DIFF=$(echo "$END - $START" | bc)
 		echo "python,naive,$line,$DIFF"
-		echo "python,naive,$line,$DIFF" >> results.csv
+		echo "python,naive,$line,$DIFF" >> data/results.csv
 	done
 done < "data/input"
 
